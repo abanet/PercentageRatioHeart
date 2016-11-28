@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0291D591DEC57500008DD31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0291D581DEC57500008DD31 /* AppDelegate.swift */; };
+		C0291D5B1DEC57500008DD31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0291D5A1DEC57500008DD31 /* ViewController.swift */; };
+		C0291D5E1DEC57500008DD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0291D5C1DEC57500008DD31 /* Main.storyboard */; };
+		C0291D601DEC57500008DD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0291D5F1DEC57500008DD31 /* Assets.xcassets */; };
+		C0291D631DEC57500008DD31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0291D611DEC57500008DD31 /* LaunchScreen.storyboard */; };
+		C0291D681DEC57500008DD31 /* PercentageRatioHeart WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C0291D671DEC57500008DD31 /* PercentageRatioHeart WatchKit App.app */; };
+		C0291D6E1DEC57500008DD31 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0291D6C1DEC57500008DD31 /* Interface.storyboard */; };
+		C0291D701DEC57500008DD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0291D6F1DEC57500008DD31 /* Assets.xcassets */; };
+		C0291D771DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C0291D761DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C0291D7E1DEC57510008DD31 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0291D7D1DEC57510008DD31 /* InterfaceController.swift */; };
+		C0291D801DEC57510008DD31 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0291D7F1DEC57510008DD31 /* ExtensionDelegate.swift */; };
+		C0291D821DEC57510008DD31 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0291D811DEC57510008DD31 /* NotificationController.swift */; };
+		C0291D841DEC57510008DD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0291D831DEC57510008DD31 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0291D691DEC57500008DD31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0291D4D1DEC57500008DD31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0291D661DEC57500008DD31;
+			remoteInfo = "PercentageRatioHeart WatchKit App";
+		};
+		C0291D781DEC57510008DD31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0291D4D1DEC57500008DD31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0291D751DEC57510008DD31;
+			remoteInfo = "PercentageRatioHeart WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C0291D8B1DEC57510008DD31 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C0291D771DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0291D8F1DEC57510008DD31 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C0291D681DEC57500008DD31 /* PercentageRatioHeart WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C0291D551DEC57500008DD31 /* PercentageRatioHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PercentageRatioHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0291D581DEC57500008DD31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C0291D5A1DEC57500008DD31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C0291D5D1DEC57500008DD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0291D5F1DEC57500008DD31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0291D621DEC57500008DD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C0291D641DEC57500008DD31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0291D671DEC57500008DD31 /* PercentageRatioHeart WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PercentageRatioHeart WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0291D6D1DEC57500008DD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		C0291D6F1DEC57500008DD31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0291D711DEC57500008DD31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0291D761DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PercentageRatioHeart WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0291D7C1DEC57510008DD31 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		C0291D7D1DEC57510008DD31 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		C0291D7F1DEC57510008DD31 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		C0291D811DEC57510008DD31 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		C0291D831DEC57510008DD31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0291D851DEC57510008DD31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0291D521DEC57500008DD31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0291D731DEC57510008DD31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0291D4C1DEC57500008DD31 = {
+			isa = PBXGroup;
+			children = (
+				C0291D571DEC57500008DD31 /* PercentageRatioHeart */,
+				C0291D6B1DEC57500008DD31 /* PercentageRatioHeart WatchKit App */,
+				C0291D7A1DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension */,
+				C0291D561DEC57500008DD31 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0291D561DEC57500008DD31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0291D551DEC57500008DD31 /* PercentageRatioHeart.app */,
+				C0291D671DEC57500008DD31 /* PercentageRatioHeart WatchKit App.app */,
+				C0291D761DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0291D571DEC57500008DD31 /* PercentageRatioHeart */ = {
+			isa = PBXGroup;
+			children = (
+				C0291D581DEC57500008DD31 /* AppDelegate.swift */,
+				C0291D5A1DEC57500008DD31 /* ViewController.swift */,
+				C0291D5C1DEC57500008DD31 /* Main.storyboard */,
+				C0291D5F1DEC57500008DD31 /* Assets.xcassets */,
+				C0291D611DEC57500008DD31 /* LaunchScreen.storyboard */,
+				C0291D641DEC57500008DD31 /* Info.plist */,
+			);
+			path = PercentageRatioHeart;
+			sourceTree = "<group>";
+		};
+		C0291D6B1DEC57500008DD31 /* PercentageRatioHeart WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				C0291D6C1DEC57500008DD31 /* Interface.storyboard */,
+				C0291D6F1DEC57500008DD31 /* Assets.xcassets */,
+				C0291D711DEC57500008DD31 /* Info.plist */,
+			);
+			path = "PercentageRatioHeart WatchKit App";
+			sourceTree = "<group>";
+		};
+		C0291D7A1DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C0291D7D1DEC57510008DD31 /* InterfaceController.swift */,
+				C0291D7F1DEC57510008DD31 /* ExtensionDelegate.swift */,
+				C0291D811DEC57510008DD31 /* NotificationController.swift */,
+				C0291D831DEC57510008DD31 /* Assets.xcassets */,
+				C0291D851DEC57510008DD31 /* Info.plist */,
+				C0291D7B1DEC57510008DD31 /* Supporting Files */,
+			);
+			path = "PercentageRatioHeart WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		C0291D7B1DEC57510008DD31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0291D7C1DEC57510008DD31 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0291D541DEC57500008DD31 /* PercentageRatioHeart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0291D901DEC57510008DD31 /* Build configuration list for PBXNativeTarget "PercentageRatioHeart" */;
+			buildPhases = (
+				C0291D511DEC57500008DD31 /* Sources */,
+				C0291D521DEC57500008DD31 /* Frameworks */,
+				C0291D531DEC57500008DD31 /* Resources */,
+				C0291D8F1DEC57510008DD31 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0291D6A1DEC57500008DD31 /* PBXTargetDependency */,
+			);
+			name = PercentageRatioHeart;
+			productName = PercentageRatioHeart;
+			productReference = C0291D551DEC57500008DD31 /* PercentageRatioHeart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C0291D661DEC57500008DD31 /* PercentageRatioHeart WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0291D8C1DEC57510008DD31 /* Build configuration list for PBXNativeTarget "PercentageRatioHeart WatchKit App" */;
+			buildPhases = (
+				C0291D651DEC57500008DD31 /* Resources */,
+				C0291D8B1DEC57510008DD31 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0291D791DEC57510008DD31 /* PBXTargetDependency */,
+			);
+			name = "PercentageRatioHeart WatchKit App";
+			productName = "PercentageRatioHeart WatchKit App";
+			productReference = C0291D671DEC57500008DD31 /* PercentageRatioHeart WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C0291D751DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0291D881DEC57510008DD31 /* Build configuration list for PBXNativeTarget "PercentageRatioHeart WatchKit Extension" */;
+			buildPhases = (
+				C0291D721DEC57510008DD31 /* Sources */,
+				C0291D731DEC57510008DD31 /* Frameworks */,
+				C0291D741DEC57510008DD31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PercentageRatioHeart WatchKit Extension";
+			productName = "PercentageRatioHeart WatchKit Extension";
+			productReference = C0291D761DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0291D4D1DEC57500008DD31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Alberto Banet";
+				TargetAttributes = {
+					C0291D541DEC57500008DD31 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FLU98JG66T;
+						ProvisioningStyle = Automatic;
+					};
+					C0291D661DEC57500008DD31 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FLU98JG66T;
+						ProvisioningStyle = Automatic;
+					};
+					C0291D751DEC57510008DD31 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FLU98JG66T;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C0291D501DEC57500008DD31 /* Build configuration list for PBXProject "PercentageRatioHeart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C0291D4C1DEC57500008DD31;
+			productRefGroup = C0291D561DEC57500008DD31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0291D541DEC57500008DD31 /* PercentageRatioHeart */,
+				C0291D661DEC57500008DD31 /* PercentageRatioHeart WatchKit App */,
+				C0291D751DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0291D531DEC57500008DD31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0291D631DEC57500008DD31 /* LaunchScreen.storyboard in Resources */,
+				C0291D601DEC57500008DD31 /* Assets.xcassets in Resources */,
+				C0291D5E1DEC57500008DD31 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0291D651DEC57500008DD31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0291D701DEC57500008DD31 /* Assets.xcassets in Resources */,
+				C0291D6E1DEC57500008DD31 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0291D741DEC57510008DD31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0291D841DEC57510008DD31 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0291D511DEC57500008DD31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0291D5B1DEC57500008DD31 /* ViewController.swift in Sources */,
+				C0291D591DEC57500008DD31 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0291D721DEC57510008DD31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0291D821DEC57510008DD31 /* NotificationController.swift in Sources */,
+				C0291D801DEC57510008DD31 /* ExtensionDelegate.swift in Sources */,
+				C0291D7E1DEC57510008DD31 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0291D6A1DEC57500008DD31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0291D661DEC57500008DD31 /* PercentageRatioHeart WatchKit App */;
+			targetProxy = C0291D691DEC57500008DD31 /* PBXContainerItemProxy */;
+		};
+		C0291D791DEC57510008DD31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0291D751DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension */;
+			targetProxy = C0291D781DEC57510008DD31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C0291D5C1DEC57500008DD31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0291D5D1DEC57500008DD31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C0291D611DEC57500008DD31 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0291D621DEC57500008DD31 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C0291D6C1DEC57500008DD31 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0291D6D1DEC57500008DD31 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0291D861DEC57510008DD31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C0291D871DEC57510008DD31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C0291D891DEC57510008DD31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = FLU98JG66T;
+				INFOPLIST_FILE = "PercentageRatioHeart WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.codigoswift.PercentageRatioHeart.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		C0291D8A1DEC57510008DD31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = FLU98JG66T;
+				INFOPLIST_FILE = "PercentageRatioHeart WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.codigoswift.PercentageRatioHeart.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		C0291D8D1DEC57510008DD31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FLU98JG66T;
+				IBSC_MODULE = PercentageRatioHeart_WatchKit_Extension;
+				INFOPLIST_FILE = "PercentageRatioHeart WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = es.codigoswift.PercentageRatioHeart.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		C0291D8E1DEC57510008DD31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FLU98JG66T;
+				IBSC_MODULE = PercentageRatioHeart_WatchKit_Extension;
+				INFOPLIST_FILE = "PercentageRatioHeart WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = es.codigoswift.PercentageRatioHeart.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		C0291D911DEC57510008DD31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FLU98JG66T;
+				INFOPLIST_FILE = PercentageRatioHeart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.codigoswift.PercentageRatioHeart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C0291D921DEC57510008DD31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FLU98JG66T;
+				INFOPLIST_FILE = PercentageRatioHeart/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = es.codigoswift.PercentageRatioHeart;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0291D501DEC57500008DD31 /* Build configuration list for PBXProject "PercentageRatioHeart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0291D861DEC57510008DD31 /* Debug */,
+				C0291D871DEC57510008DD31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0291D881DEC57510008DD31 /* Build configuration list for PBXNativeTarget "PercentageRatioHeart WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0291D891DEC57510008DD31 /* Debug */,
+				C0291D8A1DEC57510008DD31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C0291D8C1DEC57510008DD31 /* Build configuration list for PBXNativeTarget "PercentageRatioHeart WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0291D8D1DEC57510008DD31 /* Debug */,
+				C0291D8E1DEC57510008DD31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C0291D901DEC57510008DD31 /* Build configuration list for PBXNativeTarget "PercentageRatioHeart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0291D911DEC57510008DD31 /* Debug */,
+				C0291D921DEC57510008DD31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0291D4D1DEC57500008DD31 /* Project object */;
+}
