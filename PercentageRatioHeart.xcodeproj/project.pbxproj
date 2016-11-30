@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C01342141DEE14F90026EB13 /* SetMaximumInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01342131DEE14F90026EB13 /* SetMaximumInterfaceController.swift */; };
+		C01342161DEE1ED00026EB13 /* RateInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01342151DEE1ED00026EB13 /* RateInterfaceController.swift */; };
 		C0291D591DEC57500008DD31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0291D581DEC57500008DD31 /* AppDelegate.swift */; };
 		C0291D5B1DEC57500008DD31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0291D5A1DEC57500008DD31 /* ViewController.swift */; };
 		C0291D5E1DEC57500008DD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0291D5C1DEC57500008DD31 /* Main.storyboard */; };
@@ -20,6 +22,7 @@
 		C0291D801DEC57510008DD31 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0291D7F1DEC57510008DD31 /* ExtensionDelegate.swift */; };
 		C0291D821DEC57510008DD31 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0291D811DEC57510008DD31 /* NotificationController.swift */; };
 		C0291D841DEC57510008DD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0291D831DEC57510008DD31 /* Assets.xcassets */; };
+		C084F1AE1DEF3C3100D21F7E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C084F1AD1DEF3C3100D21F7E /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C01342131DEE14F90026EB13 /* SetMaximumInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetMaximumInterfaceController.swift; sourceTree = "<group>"; };
+		C01342151DEE1ED00026EB13 /* RateInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateInterfaceController.swift; sourceTree = "<group>"; };
 		C0291D551DEC57500008DD31 /* PercentageRatioHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PercentageRatioHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0291D581DEC57500008DD31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0291D5A1DEC57500008DD31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +88,9 @@
 		C0291D811DEC57510008DD31 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		C0291D831DEC57510008DD31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0291D851DEC57510008DD31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C084F1A91DEF367B00D21F7E /* PercentageRatioHeart.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PercentageRatioHeart.entitlements; sourceTree = "<group>"; };
+		C084F1AD1DEF3C3100D21F7E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		C084F1AF1DEF3CFC00D21F7E /* PercentajeRatioHeartWatchKitExtension.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PercentajeRatioHeartWatchKitExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C084F1AE1DEF3C3100D21F7E /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +119,7 @@
 				C0291D6B1DEC57500008DD31 /* PercentageRatioHeart WatchKit App */,
 				C0291D7A1DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension */,
 				C0291D561DEC57500008DD31 /* Products */,
+				C084F1AA1DEF367B00D21F7E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +136,7 @@
 		C0291D571DEC57500008DD31 /* PercentageRatioHeart */ = {
 			isa = PBXGroup;
 			children = (
+				C084F1A91DEF367B00D21F7E /* PercentageRatioHeart.entitlements */,
 				C0291D581DEC57500008DD31 /* AppDelegate.swift */,
 				C0291D5A1DEC57500008DD31 /* ViewController.swift */,
 				C0291D5C1DEC57500008DD31 /* Main.storyboard */,
@@ -149,12 +160,15 @@
 		C0291D7A1DEC57510008DD31 /* PercentageRatioHeart WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C01342131DEE14F90026EB13 /* SetMaximumInterfaceController.swift */,
+				C01342151DEE1ED00026EB13 /* RateInterfaceController.swift */,
 				C0291D7D1DEC57510008DD31 /* InterfaceController.swift */,
 				C0291D7F1DEC57510008DD31 /* ExtensionDelegate.swift */,
 				C0291D811DEC57510008DD31 /* NotificationController.swift */,
 				C0291D831DEC57510008DD31 /* Assets.xcassets */,
 				C0291D851DEC57510008DD31 /* Info.plist */,
 				C0291D7B1DEC57510008DD31 /* Supporting Files */,
+				C084F1AF1DEF3CFC00D21F7E /* PercentajeRatioHeartWatchKitExtension.entitlements */,
 			);
 			path = "PercentageRatioHeart WatchKit Extension";
 			sourceTree = "<group>";
@@ -165,6 +179,14 @@
 				C0291D7C1DEC57510008DD31 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C084F1AA1DEF367B00D21F7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C084F1AD1DEF3C3100D21F7E /* HealthKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +259,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = FLU98JG66T;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					C0291D661DEC57500008DD31 = {
 						CreatedOnToolsVersion = 8.1;
@@ -314,7 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01342161DEE1ED00026EB13 /* RateInterfaceController.swift in Sources */,
 				C0291D821DEC57510008DD31 /* NotificationController.swift in Sources */,
+				C01342141DEE14F90026EB13 /* SetMaximumInterfaceController.swift in Sources */,
 				C0291D801DEC57510008DD31 /* ExtensionDelegate.swift in Sources */,
 				C0291D7E1DEC57510008DD31 /* InterfaceController.swift in Sources */,
 			);
@@ -528,11 +557,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PercentageRatioHeart/PercentageRatioHeart.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = FLU98JG66T;
 				INFOPLIST_FILE = PercentageRatioHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.codigoswift.PercentageRatioHeart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -541,11 +574,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PercentageRatioHeart/PercentageRatioHeart.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = FLU98JG66T;
 				INFOPLIST_FILE = PercentageRatioHeart/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.codigoswift.PercentageRatioHeart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -569,6 +606,7 @@
 				C0291D8A1DEC57510008DD31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0291D8C1DEC57510008DD31 /* Build configuration list for PBXNativeTarget "PercentageRatioHeart WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -577,6 +615,7 @@
 				C0291D8E1DEC57510008DD31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0291D901DEC57510008DD31 /* Build configuration list for PBXNativeTarget "PercentageRatioHeart" */ = {
 			isa = XCConfigurationList;
@@ -585,6 +624,7 @@
 				C0291D921DEC57510008DD31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
