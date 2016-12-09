@@ -18,12 +18,12 @@
                             <items>
                                 <button width="1" alignment="center" verticalAlignment="center" title="Start!" id="nGe-tj-Jdo">
                                     <connections>
-                                        <segue destination="pkz-or-xDe" kind="modal" id="TQC-N8-znk"/>
+                                        <segue destination="pkz-or-xDe" kind="push" id="TQC-N8-znk"/>
                                     </connections>
                                 </button>
                                 <button width="1" alignment="left" verticalAlignment="bottom" title="Configure" id="7GW-fV-YFa">
                                     <connections>
-                                        <segue destination="Lbf-vp-nyr" kind="modal" id="ZUH-Tc-c9L"/>
+                                        <segue destination="Lbf-vp-nyr" kind="push" id="ZUH-Tc-c9L"/>
                                     </connections>
                                 </button>
                             </items>
@@ -38,11 +38,26 @@
             <objects>
                 <controller id="pkz-or-xDe" customClass="RateInterfaceController" customModule="PercentageRatioHeart_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Comenzando" id="21G-dX-87w"/>
+                        <imageView width="50" height="46" alignment="right" image="heart" id="4yw-qw-EnE"/>
+                        <group width="1" alignment="left" layout="vertical" id="e7A-KC-7sk">
+                            <items>
+                                <label width="82" height="48" alignment="center" text="80 %" textAlignment="left" id="uDH-wU-K3K">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="40"/>
+                                </label>
+                                <label alignment="center" verticalAlignment="bottom" text="Pulsaciones" id="IrY-WZ-FjZ"/>
+                            </items>
+                        </group>
+                        <timer alignment="center" verticalAlignment="bottom" enabled="YES" previewedSeconds="0" id="imz-4e-kYM">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </timer>
                     </items>
+                    <connections>
+                        <outlet property="porcentajeLatidos" destination="uDH-wU-K3K" id="aqa-hA-7df"/>
+                        <outlet property="txtLatidos" destination="IrY-WZ-FjZ" id="twY-HF-9zG"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="496" y="213"/>
+            <point key="canvasLocation" x="544" y="211"/>
         </scene>
         <!--Set Maximum Interface Controller-->
         <scene sceneID="Qgy-xT-Aes">
@@ -79,7 +94,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="496" y="491"/>
+            <point key="canvasLocation" x="553" y="492"/>
         </scene>
     </scenes>
 </document>

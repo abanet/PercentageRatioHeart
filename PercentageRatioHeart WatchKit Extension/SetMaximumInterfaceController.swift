@@ -58,7 +58,9 @@ class SetMaximumInterfaceController: WKInterfaceController {
         pulsaciones = pulsaciones - MaximumRate.incrementoPulsaciones
         if pulsaciones < MaximumRate.minPulsaciones {
             pulsaciones = MaximumRate.minPulsaciones
+            
         }
+        UserDefaults.standard.set(pulsaciones, forKey:"pulsaciones")
     }
     
     @IBAction func incrementar() {
@@ -66,5 +68,6 @@ class SetMaximumInterfaceController: WKInterfaceController {
         if pulsaciones > MaximumRate.maxPulsaciones {
             pulsaciones = MaximumRate.maxPulsaciones // máximo permitido por la aplicación
         }
+        UserDefaults.standard.set(pulsaciones, forKey:"pulsaciones")
     }
 }

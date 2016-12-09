@@ -24,6 +24,7 @@
 		C0291D841DEC57510008DD31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0291D831DEC57510008DD31 /* Assets.xcassets */; };
 		C084F1AE1DEF3C3100D21F7E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C084F1AD1DEF3C3100D21F7E /* HealthKit.framework */; };
 		C0A0ECA61DF215F4004E46CB /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A0ECA51DF215F4004E46CB /* HealthKit.framework */; };
+		C0BE85F11DF5E23A00A96B11 /* Latido.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BE85F01DF5E23A00A96B11 /* Latido.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		C084F1AD1DEF3C3100D21F7E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		C0A0ECA41DF215F3004E46CB /* PercentageRatioHeart WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "PercentageRatioHeart WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		C0A0ECA51DF215F4004E46CB /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		C0BE85F01DF5E23A00A96B11 /* Latido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Latido.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				C0A0ECA41DF215F3004E46CB /* PercentageRatioHeart WatchKit Extension.entitlements */,
+				C0BE85F01DF5E23A00A96B11 /* Latido.swift */,
 				C01342131DEE14F90026EB13 /* SetMaximumInterfaceController.swift */,
 				C01342151DEE1ED00026EB13 /* RateInterfaceController.swift */,
 				C0291D7D1DEC57510008DD31 /* InterfaceController.swift */,
@@ -352,6 +355,7 @@
 			files = (
 				C01342161DEE1ED00026EB13 /* RateInterfaceController.swift in Sources */,
 				C0291D821DEC57510008DD31 /* NotificationController.swift in Sources */,
+				C0BE85F11DF5E23A00A96B11 /* Latido.swift in Sources */,
 				C01342141DEE14F90026EB13 /* SetMaximumInterfaceController.swift in Sources */,
 				C0291D801DEC57510008DD31 /* ExtensionDelegate.swift in Sources */,
 				C0291D7E1DEC57510008DD31 /* InterfaceController.swift in Sources */,
