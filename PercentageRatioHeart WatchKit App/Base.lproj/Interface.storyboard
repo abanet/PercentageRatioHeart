@@ -18,7 +18,7 @@
                             <items>
                                 <button width="1" alignment="center" verticalAlignment="center" title="Start!" id="nGe-tj-Jdo">
                                     <connections>
-                                        <segue destination="pkz-or-xDe" kind="push" id="TQC-N8-znk"/>
+                                        <segue destination="pkz-or-xDe" kind="modal" id="TQC-N8-znk"/>
                                     </connections>
                                 </button>
                                 <button width="1" alignment="left" verticalAlignment="bottom" title="Configure" id="7GW-fV-YFa">
@@ -38,51 +38,97 @@
             <objects>
                 <controller id="pkz-or-xDe" customClass="RateInterfaceController" customModule="PercentageRatioHeart_WatchKit_Extension">
                     <items>
-                        <imageView width="50" height="46" alignment="right" image="heart" id="4yw-qw-EnE"/>
-                        <group width="1" alignment="left" layout="vertical" id="e7A-KC-7sk">
+                        <group width="1" alignment="left" id="EDl-ds-HIj">
                             <items>
-                                <label width="82" height="48" alignment="center" text="80 %" textAlignment="left" id="uDH-wU-K3K">
-                                    <fontDescription key="font" type="system" weight="medium" pointSize="40"/>
+                                <timer alignment="left" verticalAlignment="center" enabled="YES" previewedSeconds="0" id="imz-4e-kYM">
+                                    <fontDescription key="font" type="system" pointSize="23"/>
+                                </timer>
+                                <label width="36" alignment="right" text="Label" id="vh2-zo-fVC">
+                                    <fontDescription key="font" type="system" pointSize="25"/>
                                 </label>
-                                <label alignment="center" verticalAlignment="bottom" text="Pulsaciones" id="IrY-WZ-FjZ"/>
                             </items>
                         </group>
-                        <timer alignment="center" verticalAlignment="bottom" enabled="YES" previewedSeconds="0" id="imz-4e-kYM">
-                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                        </timer>
+                        <group width="1" alignment="left" layout="vertical" id="e7A-KC-7sk">
+                            <items>
+                                <label width="82" height="48" alignment="center" text="-- %" textAlignment="left" id="uDH-wU-K3K">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="40"/>
+                                </label>
+                                <label alignment="center" verticalAlignment="bottom" text="--- / ---" id="IrY-WZ-FjZ"/>
+                            </items>
+                        </group>
+                        <label alignment="left" text="Max. today: " id="Bml-8I-tdo"/>
+                        <label alignment="center" text="Press firmly to stop" minimumScaleFactor="0.80000000000000004" id="7ne-se-44i"/>
                     </items>
+                    <menu key="menu" id="KVU-bO-dfg">
+                        <items>
+                            <menuItem title="Finalizar" icon="accept" id="wab-9E-yWy">
+                                <connections>
+                                    <action selector="finalizarActividad" destination="pkz-or-xDe" id="fpG-og-Vcc"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Cancelar" icon="decline" id="9aN-gq-WgY">
+                                <connections>
+                                    <action selector="cancelarFinalizacion" destination="pkz-or-xDe" id="wTS-hz-mEq"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="porcentajeLatidos" destination="uDH-wU-K3K" id="aqa-hA-7df"/>
+                        <outlet property="pruebaCorazon" destination="vh2-zo-fVC" id="ezl-IC-xQp"/>
                         <outlet property="txtLatidos" destination="IrY-WZ-FjZ" id="twY-HF-9zG"/>
+                        <outlet property="txtMaxToday" destination="Bml-8I-tdo" id="MK4-zn-nwN"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="544" y="211"/>
+            <point key="canvasLocation" x="553" y="190"/>
         </scene>
         <!--Set Maximum Interface Controller-->
         <scene sceneID="Qgy-xT-Aes">
             <objects>
                 <controller id="Lbf-vp-nyr" customClass="SetMaximumInterfaceController" customModule="PercentageRatioHeart_WatchKit_Extension">
                     <items>
-                        <label width="136" height="44" alignment="left" text="170" textAlignment="center" id="7yq-yQ-ujP">
-                            <fontDescription key="font" type="system" pointSize="40"/>
+                        <label width="136" alignment="left" text="---" textAlignment="center" id="7yq-yQ-ujP">
+                            <fontDescription key="font" type="system" pointSize="30"/>
                         </label>
-                        <label width="136" height="42" alignment="left" verticalAlignment="bottom" text="Your maximum Heart Rate" numberOfLines="2" id="Q4O-z8-LHH"/>
                         <table alignment="left" id="xce-0V-oCy"/>
-                        <group width="1" alignment="left" verticalAlignment="bottom" spacing="5" id="0wd-f8-NQ8">
+                        <label width="136" alignment="left" verticalAlignment="bottom" text="Set Your Max HeartRate" textAlignment="center" numberOfLines="2" id="Q4O-z8-LHH">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <group width="136" alignment="center" verticalAlignment="bottom" spacing="5" id="0wd-f8-NQ8">
                             <items>
-                                <button width="60" alignment="left" title="+" id="imh-LT-fhc">
-                                    <fontDescription key="font" type="system" pointSize="40"/>
-                                    <connections>
-                                        <action selector="incrementar" destination="Lbf-vp-nyr" id="bDs-yz-Gbz"/>
-                                    </connections>
-                                </button>
-                                <button width="60" alignment="right" title="-" id="5FZ-Sc-1HT">
-                                    <fontDescription key="font" type="system" pointSize="40"/>
-                                    <connections>
-                                        <action selector="decrementar" destination="Lbf-vp-nyr" id="7jM-jl-K6x"/>
-                                    </connections>
-                                </button>
+                                <group width="61" alignment="left" layout="vertical" id="iFn-hD-Btq">
+                                    <items>
+                                        <button width="60" alignment="left" title="+" id="imh-LT-fhc">
+                                            <fontDescription key="font" type="system" pointSize="40"/>
+                                            <connections>
+                                                <action selector="incrementar5" destination="Lbf-vp-nyr" id="HN6-IR-s4G"/>
+                                            </connections>
+                                        </button>
+                                        <button width="34" height="34" alignment="center" title="+" id="5ee-n2-GgB">
+                                            <fontDescription key="font" type="system" pointSize="40"/>
+                                            <connections>
+                                                <action selector="incrementarUno" destination="Lbf-vp-nyr" id="WS8-aq-OBH"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <group alignment="left" layout="vertical" id="a8D-Xe-liD">
+                                    <items>
+                                        <button width="60" alignment="right" title="-" id="5FZ-Sc-1HT">
+                                            <fontDescription key="font" type="system" pointSize="40"/>
+                                            <connections>
+                                                <action selector="decrementar5" destination="Lbf-vp-nyr" id="qW1-L1-p2K"/>
+                                            </connections>
+                                        </button>
+                                        <button width="34" height="34" alignment="center" title="-" id="QAA-Tr-Pui">
+                                            <fontDescription key="font" type="system" pointSize="40"/>
+                                            <connections>
+                                                <action selector="decrementarUno" destination="Lbf-vp-nyr" id="PS3-g3-HeR"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
                             </items>
                             <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                         </group>
@@ -94,7 +140,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="553" y="492"/>
+            <point key="canvasLocation" x="553" y="482"/>
         </scene>
     </scenes>
 </document>

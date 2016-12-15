@@ -11,11 +11,15 @@ import UIKit
 
 struct Latido {
     var icono = ""
-    var descripcion = "Rango Medio"
-    var bpm = 80
-    
-    var duration: Double {
-        return 60.0 / Double(bpm)
-    }
-    
+    var descripcion = "Relax"
+    var porcentaje = 60
+}
+
+enum esfuerzo: Int {
+    case relax = 50
+    case slow = 60
+    case medium = 70
+    case fast = 80
+    case heroe = 90
+    case carefull = 100
 }

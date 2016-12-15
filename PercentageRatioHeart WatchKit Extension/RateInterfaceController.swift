@@ -10,18 +10,30 @@ import WatchKit
 import Foundation
 import HealthKit
 
+enum PatronPulsacion: Int {
+    case relax = 5
+    case slow  = 4
+    case medium = 3
+    case fast = 2
+    case heroe = 1
+    case carefull = 0
+}
 
 class RateInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
 
+    @IBOutlet var pruebaCorazon: WKInterfaceLabel!
     @IBOutlet var porcentajeLatidos: WKInterfaceLabel!
-    @IBOutlet var imgCorazon: WKInterfaceImage!
     @IBOutlet var txtLatidos: WKInterfaceLabel!
     
+    @IBOutlet var txtMaxToday: WKInterfaceLabel!
+    
     var patronesPulsaciones = [
-        Latido(icono:"❤️", descripcion: "Rápido", bpm: 160),
-        Latido(icono:"💜", descripcion: "Medio", bpm: 140),
-        Latido(icono:"💚", descripcion: "Lento", bpm: 120),
-        Latido(icono:"💙", descripcion: "Muy relajado", bpm: 60),
+        Latido(icono:"💔", descripcion: "Be Carefull my friend", porcentaje: 100),
+        Latido(icono:"❤️", descripcion: "Heroe!!!", porcentaje: 90),
+        Latido(icono:"💛", descripcion: "Fast", porcentaje: 80),
+        Latido(icono:"💜", descripcion: "Medium", porcentaje: 70),
+        Latido(icono:"💚", descripcion: "Slow", porcentaje: 60),
+        Latido(icono:"💙", descripcion: "Relax", porcentaje: 50),
         ]
     
     var workoutSession: HKWorkoutSession?
@@ -32,6 +44,7 @@ class RateInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     // esto se puede mejorar...
 
     var maxPulsaciones: Int = 170
+    var maxPulsacionesToday: Int = 0
     
     var timer: Timer?
     
@@ -45,8 +58,12 @@ class RateInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
             txtLatidos.setText("Your 100%: " + String(describing: maxPulsaciones))
         } else {
             // Nunca debería de llegar aquí
+            // Alerta: avisar de que no se puede calcular el porcentaje y que debe configurar su máx. de pulsaciones.
+            let accion = WKAlertAction(title: "Ok", style: .cancel, handler: {})
+            self.presentAlert(withTitle: "Configuration Not Found!", message: "You should set your maximum heart reat in order to calculate your percentage", preferredStyle: .alert, actions: [accion])
         }
         
+       // self.setTitle("Spinning Mataelpino")
     }
 
     override func willActivate() {
@@ -72,6 +89,8 @@ class RateInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
                 self.startWorkout()
             }
         }
+        
+        pruebaCorazon.setText(patronesPulsaciones[0].icono)
         
     }
 
@@ -122,6 +141,7 @@ class RateInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
     }
     
     func workoutDidEnd(_ date: Date) {
+        print("workoutDidEnd") // a ver si está saliendo al cerrar la actividad...
         if let query = createHeartRateStreamingQuery(date) {
             healthStore?.stop(query)
         } else {
@@ -156,51 +176,86 @@ class RateInterfaceController: WKInterfaceController, HKWorkoutSessionDelegate {
             guard let sample = heartRateSamples.first else{return}
             let value = sample.quantity.doubleValue(for: self.heartRateUnit)
             self.txtLatidos.setText("\(UInt16(value))/\(self.maxPulsaciones)")
-            let porcentaje = self.calcularPorcentaje(pulsaciones: value)
+            let porcentaje = self.calcularPorcentajeToString(pulsaciones: value)
+            self.setColorCorazon(pulsaciones: value)
+            self.actualizarMaxPulsacionesToday(pulsaciones: value)
             self.porcentajeLatidos.setText(porcentaje)
-            //self.animateHeart()
+            
         }
     }
 
-    func animateHeart() {
-        print("animateHeart()")
-        self.animate(withDuration: 0.5) {
-        self.imgCorazon.setWidth(50)
-        self.imgCorazon.setHeight(40)
-    }
+   
+    func setColorCorazon(pulsaciones: Double){
+        let pulsaciones = calcularPorcentajeToInt(pulsaciones: pulsaciones)
         
-        let when = DispatchTime.now() + Double(Int64(0.1 * double_t(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
-        print(when.rawValue)
-        let queue = DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default)
-        queue.asyncAfter(deadline: when) {
-            DispatchQueue.main.async(execute: {
-                self.animate(withDuration: 0.5, animations: {
-                self.imgCorazon.setWidth(30)
-                self.imgCorazon.setHeight(20)
-                })
-            })
+        guard pulsaciones > esfuerzo.relax.rawValue else {
+            pruebaCorazon.setText(patronesPulsaciones[PatronPulsacion.relax.rawValue].icono)
+            return
+        }
+   
+        switch pulsaciones {
+            case esfuerzo.relax.rawValue ..< esfuerzo.slow.rawValue:
+                pruebaCorazon.setText(patronesPulsaciones[PatronPulsacion.relax.rawValue].icono)
+                print("relax")
+            case esfuerzo.slow.rawValue ..< esfuerzo.medium.rawValue:
+                pruebaCorazon.setText(patronesPulsaciones[PatronPulsacion.slow.rawValue].icono)
+                print("slow")
+            case esfuerzo.medium.rawValue ..< esfuerzo.fast.rawValue:
+                pruebaCorazon.setText(patronesPulsaciones[PatronPulsacion.medium.rawValue].icono)
+                print("medium")
+            case esfuerzo.fast.rawValue ..< esfuerzo.heroe.rawValue:
+                pruebaCorazon.setText(patronesPulsaciones[PatronPulsacion.fast.rawValue].icono)
+                print("fast")
+            case esfuerzo.heroe.rawValue ..< esfuerzo.carefull.rawValue:
+                pruebaCorazon.setText(patronesPulsaciones[PatronPulsacion.heroe.rawValue].icono)
+                print("heroe")
+            default:
+                pruebaCorazon.setText(patronesPulsaciones[PatronPulsacion.carefull.rawValue].icono)
+                print("carefull")
         }
     }
     
-    
-    // Funciones del timer
-    func iniciarTimer() {
-        print("Iniciando timer")
-        let aSelector : Selector = #selector(animateHeart)
-        self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: aSelector, userInfo: nil, repeats: true)
-        RunLoop.main.add(self.timer!, forMode: .commonModes)
+    // Opciones del menú para finalizar la actividad
+    @IBAction func finalizarActividad() {
+        // Terminar sesión de trabajo
+        healthStore?.end(workoutSession!)
+        self.dismiss()
+        // TODO: mostrar anillo?
     }
     
-    func pararTimer() {
-        print("Invalidando Timer")
-        self.timer?.invalidate()
+    @IBAction func cancelarFinalizacion() {
+        // No hacemos nada. La actividad continua
+    }
+    
+    
+    
+    
+    func calcularPorcentajeToInt(pulsaciones: Double)->Int{
+        guard maxPulsaciones > 0 else {
+            print("el máximo de pulsaciones es 0. Imposible calcular porcentaje")
+            return 0
+        }
+        let porcentajeDouble = pulsaciones * 100 / Double(maxPulsaciones)
+        return Int(porcentajeDouble)
     }
     
     // Calculo del porcentaje 
-    func calcularPorcentaje(pulsaciones: Double)->String{
-        let porcentajeDouble = pulsaciones * 100 / Double(maxPulsaciones)
-        return String(Int(porcentajeDouble)) + " %"
+    func calcularPorcentajeToString(pulsaciones: Double)->String{
+        guard maxPulsaciones > 0 else {
+            print("el máximo de pulsaciones es 0. Imposible calcular porcentaje")
+            return "--"
+        }
+        return String(calcularPorcentajeToInt(pulsaciones: pulsaciones)) + " %"
     }
     
+
     
+    // Actualizar el máximo de las pulsaciones en el workout actual
+    func actualizarMaxPulsacionesToday(pulsaciones: Double){
+        if Int(pulsaciones) > maxPulsacionesToday {
+            maxPulsacionesToday = Int(pulsaciones)
+            let porcentajeMax = calcularPorcentajeToString(pulsaciones: Double(maxPulsacionesToday))
+            txtMaxToday.setText("Max. today: \(maxPulsacionesToday) / \(porcentajeMax)%")
+        }
+    }
 }

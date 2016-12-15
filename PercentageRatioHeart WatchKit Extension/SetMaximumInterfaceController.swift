@@ -37,6 +37,9 @@ class SetMaximumInterfaceController: WKInterfaceController {
         let savedPulsaciones = UserDefaults.standard.integer(forKey: "pulsaciones")
         if savedPulsaciones != 0 { // Hay pulsaciones guardadas
             pulsaciones = savedPulsaciones
+        } else {
+            // la primera vez establecemos el valor 160 como valor de partida
+            pulsaciones = 150
         }
         
     }
@@ -54,20 +57,37 @@ class SetMaximumInterfaceController: WKInterfaceController {
     
     // Funciones para incrementar y decrementar el máximo de pulsaciones. De 5 en 5.
     
-    @IBAction func decrementar() {
-        pulsaciones = pulsaciones - MaximumRate.incrementoPulsaciones
+    @IBAction func decrementar5() {
+        decrementar(5)
+    }
+    
+    @IBAction func incrementar5() {
+        incrementar(5)
+    }
+    
+    @IBAction func incrementarUno() {
+        incrementar(1)
+    }
+    
+    @IBAction func decrementarUno() {
+        decrementar(1)
+    }
+
+    func incrementar(_ cantidad: Int){
+        pulsaciones = pulsaciones + cantidad
+        if pulsaciones > MaximumRate.maxPulsaciones {
+            pulsaciones = MaximumRate.maxPulsaciones // máximo permitido por la aplicación
+        }
+        UserDefaults.standard.set(pulsaciones, forKey:"pulsaciones")
+    }
+    
+    func decrementar(_ cantidad: Int){
+        pulsaciones = pulsaciones - cantidad
         if pulsaciones < MaximumRate.minPulsaciones {
             pulsaciones = MaximumRate.minPulsaciones
             
         }
         UserDefaults.standard.set(pulsaciones, forKey:"pulsaciones")
-    }
-    
-    @IBAction func incrementar() {
-        pulsaciones = pulsaciones + MaximumRate.incrementoPulsaciones
-        if pulsaciones > MaximumRate.maxPulsaciones {
-            pulsaciones = MaximumRate.maxPulsaciones // máximo permitido por la aplicación
-        }
-        UserDefaults.standard.set(pulsaciones, forKey:"pulsaciones")
+
     }
 }
